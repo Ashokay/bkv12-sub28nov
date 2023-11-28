@@ -10,3 +10,15 @@
 [submodule "software"]
 	path = software
 	url = https://github.com/Ashokay/software.git
+[submodule "BKV12-submodule/drivers"]
+	path = BKV12-submodule/drivers
+	url = https://github.com/Ashokay/drivers.git
+[submodule "BKV12-submodule/firmware"]
+	path = BKV12-submodule/firmware
+	url = https://github.com/Ashokay/firmware.git
+[submodule "BKV12-submodule/middleware"]
+	path = BKV12-submodule/middleware
+	url = https://github.com/Ashokay/middleware.git
+[submodule "BKV12-submodule/software"]
+	path = BKV12-submodule/software
+	url = https://github.com/Ashokay/software.git
