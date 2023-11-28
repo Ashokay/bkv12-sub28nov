@@ -1,0 +1,12 @@
+[submodule "drivers"]
+	path = drivers
+	url = https://github.com/Ashokay/drivers.git
+[submodule "firmware"]
+	path = firmware
+	url = https://github.com/Ashokay/firmware.git
+[submodule "middleware"]
+	path = middleware
+	url = https://github.com/Ashokay/middleware.git
+[submodule "software"]
+	path = software
+	url = https://github.com/Ashokay/software.git
