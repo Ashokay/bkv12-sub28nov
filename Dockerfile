@@ -5,10 +5,10 @@ RUN apt-get update && \
     apt-get install -y build-essential make
 
 # Copy your project files to the container
-COPY . /app/submodule
+COPY . /app
 
 # Set the working directory
-WORKDIR /app/submodule
+WORKDIR /app
 
 #run submodule commands
 RUN git submodule init
@@ -18,11 +18,14 @@ RUN git submodule update
 COPY p32MK0512MCM064.S /opt/microchip/xc32/v4.00/pic32mx/lib/proc/32MK0512MCM064/
 COPY p32MK0512MCM064_div.S /opt/microchip/xc32/v4.00/pic32mx/lib/proc/32MK0512MCM064/
 COPY default_isr_vectors.o /opt/microchip/xc32/v4.00/pic32mx/lib/proc/32MK0512MCM064/
+COPY /PIC32MK-MC_DFP /opt/microchip/mplabx/v6.00/packs/Microchip/PIC32MX_DFP/
+
+#set dfp-pack
+ENV DFP_PATH=/opt/microchip/mplabx/v6.00/packs/Microchip/PIC32MX_DFP/1.11.151
 
 
 # Install any additional dependencies required by your project
-#RUN git submodule update --init --recursive
-RUN cd /app/submodule/BKV12-submodule && make
+RUN cd /app/BKV12-submodule && make
 
 
 
